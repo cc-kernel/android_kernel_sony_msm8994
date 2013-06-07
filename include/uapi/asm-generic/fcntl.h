@@ -84,8 +84,8 @@
 #define O_PATH		010000000
 #endif
 
-#ifndef __O_TMPFILE
-#define __O_TMPFILE	020000000
+#ifndef O_TMPFILE
+#define O_TMPFILE	020000000
 #endif
 
 /* a horrid kludge trying to make sure that this will fail on old kernels */
