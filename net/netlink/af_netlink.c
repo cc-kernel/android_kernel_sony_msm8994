@@ -2501,8 +2501,8 @@ static int netlink_dump(struct sock *sk)
 	module = cb->module;
 	skb = cb->skb;
 	mutex_unlock(nlk->cb_mutex);
-	module_put(module);
-	consume_skb(skb);
+	module_put(cb->module);
+	consume_skb(cb->skb);
 	return 0;
 
 errout_skb:
