@@ -993,7 +993,7 @@ static int trusted_update(struct key *key, struct key_preparsed_payload *prep)
 
 	if (test_bit(KEY_FLAG_NEGATIVE, &key->flags))
 		return -ENOKEY;
-	p = key->payload.data[0];
+	p = key->payload.data;
 	if (!p->migratable)
 		return -EPERM;
 	if (datalen <= 0 || datalen > 32767 || !prep->data)
