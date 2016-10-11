@@ -78,7 +78,7 @@ void msm_camera_io_dump(void __iomem *addr, int size)
 	p_str = line_str;
 	for (i = 0; i < size/4; i++) {
 		if (i % 4 == 0) {
-			snprintf(p_str, 12, "0x%p: ",  p);
+			snprintf(p_str, 12, "0x%pK: ",  p);
 			p_str += 10;
 		}
 		data = readl_relaxed(p++);
