@@ -231,7 +231,6 @@ destroy_conntrack(struct nf_conntrack *nfct)
 			list_del(&sip_node->list);
 			kfree(sip_node);
 		}
-
 	/* Expectations will have been removed in clean_from_lists,
 	 * except TFTP can create an expectation on the first packet,
 	 * before connection is in the list, so we need to clean here,
