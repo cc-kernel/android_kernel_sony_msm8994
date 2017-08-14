@@ -18,6 +18,23 @@
  */
 
 / {
+	firmware: firmware {
+                android {
+                        compatible = "android,firmware";
+                        fstab {
+                                compatible = "android,fstab";
+                                system {
+                                        compatible = "android,system";
+                                        dev = "/dev/block/platform/soc.0/f9824900.sdhci/by-name/system";
+                                        type = "ext4";
+                                        mnt_flags = "ro,barrier=1,discard";
+                                        fsmgr_flags = "wait,verify";
+                                        status = "ok";
+                                };
+                        };
+                };
+        };
+
 	aliases {
 		i2c4 = &i2c_4;
 	};
