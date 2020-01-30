@@ -18,7 +18,7 @@
  */
 
 / {
-	firmware: firmware {
+/*	firmware: firmware {
                 android {
                         compatible = "android,firmware";
                         fstab {
@@ -34,7 +34,7 @@
                         };
                 };
         };
-
+*/
 	aliases {
 		i2c4 = &i2c_4;
 	};
